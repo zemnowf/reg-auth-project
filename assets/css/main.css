@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Georgia, serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+
+input {
+    margin: 8px;
+    padding: 8px;
+}
+
+button {
+    padding: 8px;
+    background: ghostwhite;
+    border-color: dimgray;
+    cursor: pointer;
+}
+
+a {
+    color: darkblue;
+}
+
+.error{
+    color: indianred;
+}
+
+.error_field{
+    color: indianred;
+    font-size: small;
+}
+
+.success{
+    color: green;
+    font-size: large;
+}

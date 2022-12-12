@@ -1,0 +1,20 @@
+[
+    {
+        "username": "test",
+        "password": "adce577d45461d868c3dd7e3a96cb090",
+        "email": "test",
+        "name": "test"
+    },
+    {
+        "username": "admin777",
+        "password": "614ed7f06600cb88761287e8d23674e7",
+        "email": "admin777@gmail.com",
+        "name": "Test"
+    },
+    {
+        "username": "zemnowf",
+        "password": "46327200c4386f4ed2b92b66e99bbf8a",
+        "email": "zemnowf@gmail.com",
+        "name": "Daniil"
+    }
+]
