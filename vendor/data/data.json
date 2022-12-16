@@ -16,5 +16,17 @@
         "password": "46327200c4386f4ed2b92b66e99bbf8a",
         "email": "zemnowf@gmail.com",
         "name": "Daniil"
+    },
+    {
+        "username": "zemnowf1",
+        "password": "46327200c4386f4ed2b92b66e99bbf8a",
+        "email": "zemnow1@gmail.com",
+        "name": "Daniil"
+    },
+    {
+        "username": "usertest",
+        "password": "3e03bd97432efb6a3ec6a2452d57ed45",
+        "email": "user@gmail.com",
+        "name": "Daniil"
     }
 ]

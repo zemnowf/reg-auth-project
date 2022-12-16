@@ -2,7 +2,7 @@
 require_once ('user.class.php');
 
 class UserStorage {
-    private $storage = "data.json";
+    private $storage = "data/data.json";
 
     private $stored_users;
 
