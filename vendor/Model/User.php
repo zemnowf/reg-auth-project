@@ -1,5 +1,9 @@
 <?php
-class User{
+
+namespace Model;
+
+class User
+{
     private $username;
     private $raw_password;
     private $sub_password;
@@ -94,7 +98,6 @@ class User{
     {
         $this->name = $name;
     }
-
 
 
 }

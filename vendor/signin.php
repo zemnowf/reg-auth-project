@@ -1,13 +1,16 @@
 <?php
-    require ('user_storage.class.php');
-    require ('validation.php');
-    require_once ('user.class.php');
+require_once "Autoloader.php";
 
-    session_start();
-    $userStorage = new UserStorage();
-    $validator = new Validator();
+Autoloader::register();
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+use Storage\UserStorage;
+use Validation\UserValidation;
 
-    $userStorage->login($username, $password);
+session_start();
+$userStorage = new UserStorage();
+$validator = new UserValidation();
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$userStorage->login($username, $password);

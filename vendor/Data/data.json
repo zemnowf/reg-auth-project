@@ -28,5 +28,11 @@
         "password": "3e03bd97432efb6a3ec6a2452d57ed45",
         "email": "user@gmail.com",
         "name": "Daniil"
+    },
+    {
+        "username": "admin666",
+        "password": "ec3f31d213b8afd3a2abf31b915374a3",
+        "email": "admin666@gmail.com",
+        "name": "Test"
     }
 ]
