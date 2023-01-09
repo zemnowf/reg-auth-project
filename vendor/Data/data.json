@@ -40,5 +40,29 @@
         "password": "ec3f31d213b8afd3a2abf31b915374a3",
         "email": "ad@mail.ru",
         "name": "admin"
+    },
+    {
+        "username": "admin222",
+        "password": "ec3f31d213b8afd3a2abf31b915374a3",
+        "email": "admin222@gmail.com",
+        "name": "Aaron"
+    },
+    {
+        "username": "admin123",
+        "password": "ec3f31d213b8afd3a2abf31b915374a3",
+        "email": "zemnowf123@gmail.com",
+        "name": "Erophy"
+    },
+    {
+        "username": "user123",
+        "password": "ec3f31d213b8afd3a2abf31b915374a3",
+        "email": "user123@mail.ru",
+        "name": "User"
+    },
+    {
+        "username": "user111",
+        "password": "ec3f31d213b8afd3a2abf31b915374a3",
+        "email": "user111@gmail.com",
+        "name": "Test"
     }
 ]

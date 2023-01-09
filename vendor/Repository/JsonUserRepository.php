@@ -4,16 +4,19 @@
 namespace Repository;
 
 use Model\User;
+use Repository\UserIterator\StoredUsersIterator;
 
 class JsonUserRepository implements UserRepository
 {
     private static $instanse = null;
     private $storageFile = "Data/Data.json";
     private $storedUsers;
+    private StoredUsersIterator $storedUsersIterator;
 
     private function __construct()
     {
         $this->storedUsers = json_decode(file_get_contents($this->storageFile), true);
+        $this->storedUsersIterator = new StoredUsersIterator($this->storedUsers);
         $this->validateStorage($this->storageFile);
     }
 
@@ -38,8 +41,8 @@ class JsonUserRepository implements UserRepository
 
     public function findIfUserExistsByName($username)
     {
-        foreach ($this->storedUsers as $user) {
-            if ($username == $user['username']) {
+        foreach ($this->storedUsersIterator as $user) {
+            if ($username == $user->username) {
                 return true;
             }
         }
@@ -48,8 +51,8 @@ class JsonUserRepository implements UserRepository
 
     public function findIfUserExistsByEmail($email)
     {
-        foreach ($this->storedUsers as $user) {
-            if ($email == $user['email']) {
+        foreach ($this->storedUsersIterator as $user) {
+            if ($email == $user->email) {
                 return true;
             }
         }
@@ -89,7 +92,7 @@ class JsonUserRepository implements UserRepository
 
     function getAll()
     {
-        return $this->storedUsers;
+        return $this->storedUsersIterator;
     }
 
 }

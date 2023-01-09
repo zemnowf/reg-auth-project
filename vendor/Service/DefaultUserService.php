@@ -43,14 +43,14 @@ class DefaultUserService implements UserService
 
         foreach ($this->userRepository->getAll() as $user) {
 
-            if ($username == $user['username']) {
+            if ($username == $user->username) {
                 $password = md5($password . "ffawc3");
-                if ($password == $user['password']) {
+                if ($password == $user->password) {
                     return ApiResponse::builder()
                         ->body([
-                            "username" => $user['username'],
-                            "email" => $user['email'],
-                            "name" => $user['name']
+                            "username" => $user->username,
+                            "email" => $user->email,
+                            "name" => $user->name
                         ])
                         ->success(true)
                         ->build();
@@ -101,7 +101,7 @@ class DefaultUserService implements UserService
             return ApiResponse::builder()
                 ->body([
                     "status" => false,
-                    "message" => "User with such username is already signed up, please choose another username",
+                    "message" => "User with such email is already signed up, please choose another username",
                     "error_id" => ""
                 ])
                 ->success(false)
