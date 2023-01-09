@@ -3,14 +3,19 @@ require_once "Autoloader.php";
 
 Autoloader::register();
 
-use Storage\UserStorage;
-use Validation\UserValidation;
+use Service\DefaultUserService;
 
 session_start();
-$userStorage = new UserStorage();
-$validator = new UserValidation();
+$userService = DefaultUserService::getInstance();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$userStorage->login($username, $password);
+$result = $userService->login($username, $password);
+
+if (!$result->getSuccess()){
+    echo json_encode($result->getBody());
+} else {
+    $_SESSION['user'] = $result->getBody();
+    echo json_encode(["status" => true]);
+}

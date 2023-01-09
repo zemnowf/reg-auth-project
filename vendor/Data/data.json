@@ -34,5 +34,11 @@
         "password": "ec3f31d213b8afd3a2abf31b915374a3",
         "email": "admin666@gmail.com",
         "name": "Test"
+    },
+    {
+        "username": "admin1",
+        "password": "ec3f31d213b8afd3a2abf31b915374a3",
+        "email": "ad@mail.ru",
+        "name": "admin"
     }
 ]

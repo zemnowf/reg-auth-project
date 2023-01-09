@@ -5,16 +5,16 @@ namespace Model;
 class User
 {
     private $username;
-    private $raw_password;
-    private $sub_password;
+    private $rawPassword;
+    private $subPassword;
     private $email;
     private $name;
 
-    public function __construct($username, $raw_password, $sub_password, $email, $name)
+    public function __construct($username, $rawPassword, $subPassword, $email, $name)
     {
         $this->username = $username;
-        $this->raw_password = $raw_password;
-        $this->sub_password = $sub_password;
+        $this->rawPassword = $rawPassword;
+        $this->subPassword = $subPassword;
         $this->email = $email;
         $this->name = $name;
     }
@@ -40,15 +40,15 @@ class User
      */
     public function getRawPassword()
     {
-        return $this->raw_password;
+        return $this->rawPassword;
     }
 
     /**
-     * @param mixed $raw_password
+     * @param mixed $rawPassword
      */
-    public function setRawPassword($raw_password)
+    public function setRawPassword($rawPassword)
     {
-        $this->raw_password = $raw_password;
+        $this->rawPassword = $rawPassword;
     }
 
     /**
@@ -56,15 +56,15 @@ class User
      */
     public function getSubPassword()
     {
-        return $this->sub_password;
+        return $this->subPassword;
     }
 
     /**
-     * @param mixed $sub_password
+     * @param mixed $subPassword
      */
-    public function setSubPassword($sub_password)
+    public function setSubPassword($subPassword)
     {
-        $this->sub_password = $sub_password;
+        $this->subPassword = $subPassword;
     }
 
     /**
