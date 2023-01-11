@@ -1,5 +1,4 @@
 <?php
-//require_once('User.php');
 
 namespace Repository;
 
@@ -39,7 +38,7 @@ class JsonUserRepository implements UserRepository
         }
     }
 
-    public function findIfUserExistsByName($username)
+    public function findIfUserExistsByName($username): bool
     {
         foreach ($this->storedUsersIterator as $user) {
             if ($username == $user->username) {
@@ -49,7 +48,7 @@ class JsonUserRepository implements UserRepository
         return false;
     }
 
-    public function findIfUserExistsByEmail($email)
+    public function findIfUserExistsByEmail($email): bool
     {
         foreach ($this->storedUsersIterator as $user) {
             if ($email == $user->email) {
@@ -59,21 +58,24 @@ class JsonUserRepository implements UserRepository
         return false;
     }
 
-    public function deleteUserByName($checkUser)
+    public function deleteUserByName($checkUser): bool
     {
         foreach ($this->storedUsers as $user) {
             if ($checkUser['username'] == $user['username']) {
                 unset($this->storedUsers[$user['username']]);
+                return true;
             }
         }
         return false;
     }
 
-    public function updateUserByName($checkUser)
+    public function updateUserByName($checkUser): bool
     {
         foreach ($this->storedUsers as $user) {
             if ($checkUser['username'] == $user['username']) {
-                array_replace($this->storedUsers[$user], $checkUser);
+                $result = array_replace($this->storedUsers[$user], $checkUser);
+                $this->storedUsers[$user] = $result;
+                return true;
             }
         }
         return false;
@@ -90,7 +92,7 @@ class JsonUserRepository implements UserRepository
         }
     }
 
-    function getAll()
+    function getAll(): StoredUsersIterator
     {
         return $this->storedUsersIterator;
     }

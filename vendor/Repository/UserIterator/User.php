@@ -2,7 +2,8 @@
 
 namespace Repository\UserIterator;
 
-class User{
+class User
+{
     public string $username;
     public string $password;
     public string $email;

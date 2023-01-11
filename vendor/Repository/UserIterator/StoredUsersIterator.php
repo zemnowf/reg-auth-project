@@ -3,14 +3,13 @@
 namespace Repository\UserIterator;
 
 use Iterator;
-use Repository\UserIterator\User;
 
 class StoredUsersIterator implements Iterator
 {
 
-    private $position = 0;
+    private int $position = 0;
 
-    private $storedUsers = [];
+    private array $storedUsers = [];
 
     public function __construct(array $storedUsers)
     {

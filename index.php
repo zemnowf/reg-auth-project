@@ -25,7 +25,7 @@ if(isset($_SESSION['user'])){
     <input type="password" id="password" name="password">
     <button type="submit" class="login-btn">Sign in!</button>
     <p>
-        <a href="signup.php">Sign in</a>
+        <a href="signup.php">Sign up</a>
     </p>
     <p class="error" id="error"></p>
 </form>
