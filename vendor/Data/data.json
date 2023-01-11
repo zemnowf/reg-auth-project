@@ -70,5 +70,11 @@
         "password": "ec3f31d213b8afd3a2abf31b915374a3",
         "email": "admin665@gmail.com",
         "name": "Linus"
+    },
+    {
+        "username": "somethingoeswrong",
+        "password": "533ec87e7750d632635405c0119c4a06",
+        "email": "sgw@gmail.com",
+        "name": "Shw"
     }
 ]

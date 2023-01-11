@@ -1,0 +1,16 @@
+{
+    "name": "zemnowf/reg-auth-project",
+    "description": "website supporting sign in in and signing up and storing data in json file",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zemnowf"
+        }
+    ],
+    "minimum-stability": "stable",
+
+    "require": {
+        "twig/twig": "^3.5"
+    }
+}
