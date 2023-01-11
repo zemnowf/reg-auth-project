@@ -76,5 +76,11 @@
         "password": "533ec87e7750d632635405c0119c4a06",
         "email": "sgw@gmail.com",
         "name": "Shw"
+    },
+    {
+        "username": "tomsmith",
+        "password": "1b7084a300e95cac5fc3ae62a2718572",
+        "email": "tomsmith123@gmail.com",
+        "name": "Tom"
     }
 ]

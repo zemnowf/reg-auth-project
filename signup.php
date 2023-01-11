@@ -1,46 +1,16 @@
 <?php
+
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
+
+require "vendor/autoload.php";
+
+$loader = new FilesystemLoader('views');
+$twig = new Environment($loader);
+
 session_start();
-if($_SESSION['user']){
+if ($_SESSION['user']) {
     header('Location: main.php');
 }
-?>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registration</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-<form>
-    <h2>Registration</h2>
-    <label>Login</label>
-    <input type="text" id="username" name="username">
-    <p class="error_field" id="error_username"></p>
-    <label>Password</label>
-    <input type="password" id="password" name="password">
-    <p class="error_field" id="error_password"></p>
-    <label>Confirm password</label>
-    <input type="password" id="sub_password" name="sub_password">
-    <p class="error_field" id="error_confirm"></p>
-    <label>Email</label>
-    <input type="text" id="email" name="email">
-    <p class="error_field" id="error_email"></p>
-    <label>Name</label>
-    <input type="text" id="name" name="name">
-    <p class="error_field" id="error_name"></p>
-    <button type="submit" class="signup-btn">Register!</button>
-    <p>
-        <a href="index.php">Sign in</a>
-    </p>
-    <p class="error" id="error"></p>
-</form>
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+echo $twig->render('signup.twig');
